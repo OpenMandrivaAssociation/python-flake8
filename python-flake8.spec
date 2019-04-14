@@ -10,6 +10,10 @@ License:        MIT
 URL:            https://pypi.python.org/pypi/flake8
 Source0:        http://pypi.io/packages/source/f/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
+BuildRequires:  python-devel
+BuildRequires:  python3dist(setuptools)
+BuildRequires:  python-nose
+BuildRequires:  python-mccabe
 
 %description
 Flake8 is a wrapper around these tools:
