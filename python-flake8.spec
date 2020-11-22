@@ -2,13 +2,13 @@
 %global pypi_name flake8
 
 Name:           python-%{pypi_name}
-Version:        3.7.9
-Release:        1
+Version:	3.8.4
+Release:	1
 Group:          Development/Python
 Summary:        The modular source code checker: pep8, pyflakes and co
 License:        MIT
 URL:            https://pypi.python.org/pypi/flake8
-Source0:        http://pypi.io/packages/source/f/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+Source0:	https://files.pythonhosted.org/packages/71/6a/b3341ef7e7f3585add027d876a7d9837cdfe3320b6c6b5fd0cddfa9ceeac/flake8-3.8.4.tar.gz
 BuildArch:      noarch
 BuildRequires:  python-devel
 BuildRequires:  python3dist(setuptools)
