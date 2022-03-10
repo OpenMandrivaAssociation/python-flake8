@@ -42,5 +42,5 @@ sed -i -e "/setup_requires=\['pytest-runner'\],/d" setup.py
 %files
 %doc LICENSE
 %{_bindir}/flake8
-#{python_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
+%{python_sitelib}/%{pypi_name}-%{version}-py*.*.egg-info
 %{python_sitelib}/%{pypi_name}/
