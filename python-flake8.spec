@@ -2,8 +2,8 @@
 %global pypi_name flake8
 
 Name:           python-%{pypi_name}
-Version:	3.9.0
-Release:	2
+Version:	4.0.1
+Release:	1
 Group:          Development/Python
 Summary:        The modular source code checker: pep8, pyflakes and co
 License:        MIT
