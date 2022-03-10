@@ -34,13 +34,13 @@ rm -rf flake8.egg-info
 sed -i -e "/setup_requires=\['pytest-runner'\],/d" setup.py
 
 %build
-%py3_build
+%py_build
 
 %install
-%py3_install
+%py_install
 
 %files
 %doc LICENSE
 %{_bindir}/flake8
-%{python_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
+#{python_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
 %{python_sitelib}/%{pypi_name}/
