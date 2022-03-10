@@ -8,7 +8,8 @@ Group:          Development/Python
 Summary:        The modular source code checker: pep8, pyflakes and co
 License:        MIT
 URL:            https://pypi.python.org/pypi/flake8
-Source0:	https://files.pythonhosted.org/packages/71/6a/b3341ef7e7f3585add027d876a7d9837cdfe3320b6c6b5fd0cddfa9ceeac/flake8-%{version}.tar.gz
+Source0:        https://files.pythonhosted.org/packages/source/f/%{pypi_name}/%{pypi_name}-%{version}.tar.gz	
+Patch0:         fix-deps-requires.patch
 BuildArch:      noarch
 BuildRequires:  python-devel
 BuildRequires:  python3dist(setuptools)
@@ -28,6 +29,7 @@ output.
 
 %prep
 %setup -q -n %{pypi_name}-%{version}
+%autopatch -p1
 
 # remove bundled egg-info
 rm -rf flake8.egg-info
