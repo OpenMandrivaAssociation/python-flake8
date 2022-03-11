@@ -1,0 +1,12 @@
+diff -uraN flake8-4.0.1/setup.cfg omv-flake8-4.0.1/setup.cfg
+--- flake8-4.0.1/setup.cfg	2021-10-11 14:42:30.357466700 +0200
++++ omv-flake8-4.0.1/setup.cfg	2022-03-11 00:32:51.256053401 +0100
+@@ -35,7 +35,7 @@
+ package_dir = 
+ 	=src
+ install_requires = 
+-	mccabe>=0.6.0,<0.7.0
++	mccabe>=0.6.0,<0.7.1
+ 	pycodestyle>=2.8.0,<2.9.0
+ 	pyflakes>=2.4.0,<2.5.0
+ 	importlib-metadata<4.3;python_version<"3.8"
