@@ -2,7 +2,7 @@
 %global pypi_name flake8
 
 Name:           python-%{pypi_name}
-Version:	6.1.0
+Version:	7.0.0
 Release:	1
 Group:          Development/Python
 Summary:        The modular source code checker: pep8, pyflakes and co
