@@ -1,9 +1,8 @@
-# Created by pyp2rpm-1.0.1
 %global pypi_name flake8
 
 Name:           python-%{pypi_name}
-Version:	7.1.1
-Release:	2
+Version:	7.3.0
+Release:	1
 Group:          Development/Python
 Summary:        The modular source code checker: pep8, pyflakes and co
 License:        MIT
@@ -11,10 +10,10 @@ URL:            https://pypi.python.org/pypi/flake8
 Source0:        https://files.pythonhosted.org/packages/source/f/%{pypi_name}/%{pypi_name}-%{version}.tar.gz	
 #Patch0:         fix-deps-requires.patch
 BuildArch:      noarch
-BuildRequires:  python-devel
-BuildRequires:  python3dist(setuptools)
-BuildRequires:  python-nose
-BuildRequires:  python-mccabe
+BuildSystem:	python
+BuildRequires:  python%{pyver}dist(setuptools)
+BuildRequires:  python%{pyver}dist(nose)
+BuildRequires:  python%{pyver}dist(mccabe)
 
 %description
 Flake8 is a wrapper around these tools:
@@ -27,19 +26,10 @@ the single ``flake8`` script.
 It displays the warnings in a per-file, merged
 output.
 
-%prep
-%setup -q -n %{pypi_name}-%{version}
-%autopatch -p1
-
+%prep -a
 # remove bundled egg-info
 rm -rf flake8.egg-info
 sed -i -e "/setup_requires=\['pytest-runner'\],/d" setup.py
-
-%build
-%py_build
-
-%install
-%py_install
 
 %files
 %doc LICENSE
