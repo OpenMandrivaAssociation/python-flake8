@@ -2,7 +2,7 @@
 
 Name:           python-%{pypi_name}
 Version:	7.3.0
-Release:	1
+Release:	2
 Group:          Development/Python
 Summary:        The modular source code checker: pep8, pyflakes and co
 License:        MIT
