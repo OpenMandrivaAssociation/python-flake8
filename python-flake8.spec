@@ -1,8 +1,8 @@
 %global pypi_name flake8
 
 Name:           python-%{pypi_name}
-Version:	7.3.0
-Release:	2
+Version:	7.4.1
+Release:	1
 Group:          Development/Python
 Summary:        The modular source code checker: pep8, pyflakes and co
 License:        MIT
@@ -29,10 +29,9 @@ output.
 %prep -a
 # remove bundled egg-info
 rm -rf flake8.egg-info
-sed -i -e "/setup_requires=\['pytest-runner'\],/d" setup.py
 
 %files
 %doc LICENSE
 %{_bindir}/flake8
-%{python_sitelib}/%{pypi_name}-%{version}-py*.*.egg-info
+%{python_sitelib}/%{pypi_name}-%{version}*.*-info
 %{python_sitelib}/%{pypi_name}/
